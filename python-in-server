@@ -1,0 +1,30 @@
+running python script in server
+setting apache handler in cpanel:
+https://forums.cpanel.net/threads/how-to-install-python-in-my-cpanel-webhosting.174842/
+
+and then change permission to 755 and change owner to the user (the user has access to this domain, eg: /home/user/domain)
+
+
+
+//deploying flask application via cpanel
+
+source:
+https://www.liquidweb.com/kb/installing-python-wsgi-applications-on-cpanel/
+
+
+STEP1:
+create passenger_wsgi.py with content bellow
+
+from run import app as application
+
+STEP2:
+makeing application in server:
+name: some name
+base url: /
+application path: root-project-folder    e.g: api.dyacomotor.com
+
+
+
+When you done STEP2 , wait for some second(about 10sec) then test that.
+
+if you got some probelem, check the : /etc/apache2/conf.d/userdata/std/2_4/domain-name/subdomain-name
